@@ -1,0 +1,51 @@
+{
+	"name": "vs-green-code",
+	"repository": {
+		"type": "git",
+		"url": "git://github.com/my-green-code/vs-green-code.git"
+	},
+	"displayName": "vs-green-code",
+	"description": "Analyzes TypeScript code for green coding best practices.",
+	"version": "0.0.1",
+	"license": "cc-by-4.0",
+	"engines": {
+		"vscode": "^1.98.0"
+	},
+	"categories": [
+		"Other",
+		"Linters"
+	],
+	"activationEvents": [
+		"onCommand:extension.analyzeCode"
+	],
+	"main": "./out/extension.js",
+	"contributes": {
+		"commands": [
+			{
+				"command": "extension.analyzeCode",
+				"title": "Analyze Green Coding Score"
+			}
+		]
+	},
+	"scripts": {
+		"vscode:prepublish": "pnpm run compile",
+		"compile": "tsc",
+		"watch": "tsc -watch",
+		"pretest": "pnpm run compile && pnpm run lint",
+		"lint": "eslint src",
+		"test": "vscode-test",
+		"package": "vsce package"
+	},
+	"devDependencies": {
+		"@types/vscode": "^1.98.0",
+		"@types/mocha": "^10.0.10",
+		"@types/node": "20.x",
+		"@typescript-eslint/eslint-plugin": "^8.28.0",
+		"@typescript-eslint/parser": "^8.28.0",
+		"eslint": "^9.23.0",
+		"typescript": "^5.8.2",
+		"@vscode/test-cli": "^0.0.10",
+		"@vscode/test-electron": "^2.4.1"
+	},
+	"packageManager": "pnpm@10.6.5+sha256.47c8bca42b4b48534b5b1b28d573c506773937b02f68e52992fbd8269131c5c8"
+}
