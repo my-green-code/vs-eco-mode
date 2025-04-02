@@ -1,71 +1,91 @@
-# ecomode README
+# Eco Mode for VS Code and Cursor
 
-This is the README for your extension "ecomode". After writing up a brief description, we recommend including the following sections.
+A VS Code/Cursor extension that automatically pauses power-intensive features when you're inactive, helping to reduce energy consumption and improve battery life.
 
 ## Features
 
-Describe specific features of your extension including screenshots of your extension in action. Image paths are relative to this README file.
+- 🚀 **Automatic Energy Saving**: Automatically detects when you're inactive and disables power-intensive features
+- 💤 **Smart Feature Management**: Toggles various editor features to save energy:
+  - Minimap
+  - Smooth Scrolling
+  - GPU Acceleration
+  - Inline Completions
+- ⚡ **Quick Toggle**: Manually enable/disable Eco Mode with a keyboard shortcut
+- ⚙️ **Settings Panel**: Customize which features are affected by Eco Mode
+- 🔄 **Auto-Recovery**: Automatically restores all features when you return to activity
 
-For example if there is an image subfolder under your extension project workspace:
+## Installation
 
-\!\[feature X\]\(images/feature-x.png\)
+### VS Code
 
-> Tip: Many popular extensions utilize animations. This is an excellent way to show off your extension! We recommend short, focused animations that are easy to follow.
+1. Open VS Code
+2. Go to the Extensions view (Ctrl+Shift+X or Cmd+Shift+X)
+3. Search for "Eco Mode"
+4. Click Install
+
+### Cursor
+
+1. Open Cursor
+2. Go to the Extensions view (Ctrl+Shift+X or Cmd+Shift+X)
+3. Search for "Eco Mode"
+4. Click Install
+
+## Usage
+
+### Automatic Mode
+
+- The extension automatically activates after 30 seconds of inactivity
+- All power-intensive features are automatically disabled
+- Features are restored when you return to activity
+
+### Manual Control
+
+- Use the command palette (Ctrl+Shift+P or Cmd+Shift+P) and type "Eco Mode"
+- Select "Eco Mode: Toggle Eco Mode" to manually enable/disable
+- Use the keyboard shortcut Ctrl+Shift+E (or Cmd+Shift+E on Mac)
+
+### Settings
+
+- Open the command palette (Ctrl+Shift+P or Cmd+Shift+P)
+- Type "Eco Mode" and select "Eco Mode: Open Eco Mode Settings"
+- Customize which features are affected by Eco Mode
+
+## Features Affected by Eco Mode
+
+- **Minimap**: Disabled to reduce rendering overhead
+- **Smooth Scrolling**: Disabled to reduce GPU usage
+- **GPU Acceleration**: Set to "off" in the terminal
+- **Inline Completions**: Disabled to reduce CPU usage
 
 ## Requirements
 
-If you have any requirements or dependencies, add a section describing those and how to install and configure them.
+- VS Code or Cursor version 1.85.0 or higher
 
 ## Extension Settings
 
-Include if your extension adds any VS Code settings through the `contributes.configuration` extension point.
+The extension uses the following VS Code settings:
 
-For example:
-
-This extension contributes the following settings:
-
-* `myExtension.enable`: Enable/disable this extension.
-* `myExtension.thing`: Set to `blah` to do something.
+- `editor.minimap.enabled`
+- `editor.smoothScrolling`
+- `terminal.integrated.gpuAcceleration`
+- `cursor.inlineCompletions.enabled`
 
 ## Known Issues
 
-Calling out known issues can help limit users opening duplicate issues against your extension.
+- None reported yet
 
-## Release Notes
+## Contributing
 
-Users appreciate release notes as you update your extension.
+Contributions are welcome! Please feel free to submit a Pull Request.
 
-### 1.0.0
+## License
 
-Initial release of ...
+This extension is licensed under the MIT License - see the LICENSE file for details.
 
-### 1.0.1
+## Credits
 
-Fixed issue #.
+Created by Christophe Bellec - my-green-code
 
-### 1.1.0
+## Support
 
-Added features X, Y, and Z.
-
----
-
-## Following extension guidelines
-
-Ensure that you've read through the extensions guidelines and follow the best practices for creating your extension.
-
-* [Extension Guidelines](https://code.visualstudio.com/api/references/extension-guidelines)
-
-## Working with Markdown
-
-You can author your README using Visual Studio Code. Here are some useful editor keyboard shortcuts:
-
-* Split the editor (`Cmd+\` on macOS or `Ctrl+\` on Windows and Linux).
-* Toggle preview (`Shift+Cmd+V` on macOS or `Shift+Ctrl+V` on Windows and Linux).
-* Press `Ctrl+Space` (Windows, Linux, macOS) to see a list of Markdown snippets.
-
-## For more information
-
-* [Visual Studio Code's Markdown Support](http://code.visualstudio.com/docs/languages/markdown)
-* [Markdown Syntax Reference](https://help.github.com/articles/markdown-basics/)
-
-**Enjoy!**
+If you encounter any issues or have suggestions, please open an issue on the GitHub repository.
